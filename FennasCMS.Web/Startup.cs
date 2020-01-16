@@ -10,10 +10,10 @@ namespace FennasCMS.Web
         {
 
             services
-                .AddOrchardCms()
-                //.AddOrchardCore()
-                //.AddMvc()
-                //.WithTenants()
+                //.AddOrchardCms()
+                .AddOrchardCore()
+                .AddMvc()
+                .WithTenants()
             ;
         }
         
@@ -28,7 +28,6 @@ namespace FennasCMS.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
             app.UseOrchardCore();
         }
     }
